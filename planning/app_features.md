@@ -1,6 +1,6 @@
 ---
 
-## Feature Set: VeraDose App
+## Feature Set: Patient Guardian App
 
 ### Pillar 1: Prescription Safety Check (The Original Core)
 
@@ -11,7 +11,7 @@
 | **Dosage Verification** | Compares prescribed dose against weight-based and age-based safe therapeutic ranges using a curated, offline-first drug database tailored to common medications in the target region. |
 | **Drug-Drug Interaction Check** | Cross-references new medication against the patient's existing medication list (manually entered or previously scanned) to flag potentially dangerous combinations. |
 | **Allergy Alert** | Flags any medication that contains a known allergen previously recorded by the user. |
-| **Clear, Localized Output** | Instead of technical warnings, the app displays simple, actionable messages in the user's preferred language: *This dose may be high for a child of this weight. Confirm with pharmacist.* |
+| **Clear, Localized Output** | Instead of technical warnings, the app displays simple, actionable messages in the user's preferred language: *"This dose may be high for a child of this weight. Confirm with pharmacist."* |
 
 ---
 

@@ -1,6 +1,6 @@
----
-
 # Requirements Document: Authentication Microservice
+
+---
 
 ## 1. Executive Summary
 **Purpose:** To provide a centralized, secure, and scalable authentication and authorization service for all internal applications and microservices.
@@ -12,6 +12,7 @@ This microservice will handle user identity management, login flows, token issua
 
 ---
 
+---
 ## 3. Functional Requirements
 
 ### 3.1. User Registration
@@ -38,6 +39,7 @@ This microservice will handle user identity management, login flows, token issua
 
 ---
 
+---
 ## 4. API Contracts (High-Level)
 
 ### 4.1. Public API
@@ -55,6 +57,7 @@ This microservice will handle user identity management, login flows, token issua
 | `/internal/v1/users/{id}/permissions` | GET | Fetch permissions for a user. | Authorization Service |
 
 ---
+---
 
 ## 5. Data Model (Simplified)
 
@@ -70,21 +73,6 @@ This microservice will handle user identity management, login flows, token issua
 | `role` | VARCHAR(50) | User role (admin, user, viewer) |
 | `created_at` | TIMESTAMP | |
 | `updated_at` | TIMESTAMP | |
-
-### `refresh_tokens` (PostgreSQL)
-| Column | Type | Description |
-|--------|------|-------------|
-| `id` | UUID | Primary Key |
-| `user_id` | UUID | FK to users |
-| `token_hash` | VARCHAR(255) | Hashed refresh token |
-| `family_id` | VARCHAR(36) | For token rotation tracking |
-| `revoked` | BOOLEAN | |
-| `expires_at` | TIMESTAMP | |
-
-### `blacklist` (Redis)
-- **Key:** `bl:jti:{jti}`
-- **Value:** `{user_id}`
-- **TTL:** Remaining lifespan of the access token.
 
 ---
 

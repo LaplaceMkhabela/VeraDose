@@ -68,8 +68,6 @@ This microservice will handle user identity management, login flows, token issua
 | `email` | VARCHAR(255) | Unique, indexed |
 | `password_hash` | VARCHAR(255) | Nullable for SSO users |
 | `is_verified` | BOOLEAN | Email verification status |
-| `failed_attempts` | INT | Counter for lockout logic |
-| `locked_until` | TIMESTAMP | Lockout expiration |
 | `role` | VARCHAR(50) | User role (admin, user, viewer) |
 | `created_at` | TIMESTAMP | |
 | `updated_at` | TIMESTAMP | |

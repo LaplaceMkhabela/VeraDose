@@ -99,6 +99,28 @@ def generate_verification_token():
     pass
 
 # ============================================================================
+# Authorization Decorators
+# ============================================================================
+
+def require_auth(f):
+    """
+    Decorator to protect endpoints requiring authentication.
+    Extracts Bearer token from Authorization header.
+    Validates token signature, expiration, and blacklist status.
+    Injects 'current_user' into the route function.
+    """
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        # TODO: Extract token from Authorization header
+        # TODO: Validate token
+        # TODO: Check Redis blacklist
+        # TODO: Set current_user context
+        # TODO: Return 401 if invalid
+        pass
+    return decorated
+
+
+# ============================================================================
 # API Endpoints - Public
 # ============================================================================
 
@@ -260,5 +282,6 @@ def rate_limit_exceeded(error):
 def internal_server_error(error):
     """Return standardized 500 error response."""
     return jsonify({"error": "Internal Server Error", "message": "An unexpected error occurred"}), 500
+
 
 

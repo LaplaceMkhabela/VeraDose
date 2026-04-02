@@ -80,3 +80,21 @@ def validate_password_strength(password):
     Returns (is_valid, error_message)
     """
     pass
+
+# ============================================================================
+# Email Helpers
+# ============================================================================
+
+def send_verification_email(email, verification_token):
+    """
+    Send email verification OTP to user's email address.
+    Uses SMTP service (SendGrid, AWS SES, etc.).
+    Template: "Verify your email with code: {token}"
+    """
+    pass
+
+
+def generate_verification_token():
+    """Generate a secure one-time token (6-digit numeric or UUID) for email verification."""
+    pass
+

@@ -47,3 +47,36 @@ class User:
     def update_verification_status(email, is_verified):
         """Mark email as verified after OTP confirmation."""
         pass
+
+
+# ============================================================================
+# Password Helpers
+# ============================================================================
+
+def hash_password(plain_password):
+    """
+    Hash password using bcrypt (cost factor 10+) or Argon2id.
+    Returns the hashed string suitable for storage.
+    """
+    pass
+
+
+def verify_password(plain_password, password_hash):
+    """
+    Compare plaintext password against stored hash.
+    Returns True if matches, False otherwise.
+    """
+    pass
+
+
+def validate_password_strength(password):
+    """
+    Enforce password complexity rules:
+    - Minimum 8 characters
+    - At least one uppercase letter
+    - At least one lowercase letter
+    - At least one number
+    - At least one special character
+    Returns (is_valid, error_message)
+    """
+    pass

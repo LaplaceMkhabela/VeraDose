@@ -222,4 +222,43 @@ def get_user_permissions(user_id):
     # TODO: Return permissions
     pass
 
+ ============================================================================
+# Error Handlers
+# ============================================================================
+
+@app.errorhandler(400)
+def bad_request(error):
+    """Return standardized 400 error response."""
+    return jsonify({"error": "Bad Request", "message": str(error)}), 400
+
+
+@app.errorhandler(401)
+def unauthorized(error):
+    """Return standardized 401 error response."""
+    return jsonify({"error": "Unauthorized", "message": "Invalid or missing authentication token"}), 401
+
+
+@app.errorhandler(403)
+def forbidden(error):
+    """Return standardized 403 error response."""
+    return jsonify({"error": "Forbidden", "message": "Insufficient permissions"}), 403
+
+
+@app.errorhandler(404)
+def not_found(error):
+    """Return standardized 404 error response."""
+    return jsonify({"error": "Not Found", "message": "The requested resource does not exist"}), 404
+
+
+@app.errorhandler(429)
+def rate_limit_exceeded(error):
+    """Return standardized 429 error response."""
+    return jsonify({"error": "Too Many Requests", "message": "Rate limit exceeded. Please try again later."}), 429
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    """Return standardized 500 error response."""
+    return jsonify({"error": "Internal Server Error", "message": "An unexpected error occurred"}), 500
+
 

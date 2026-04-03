@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "primary": "#00BFA5",
+              "primary-container": "#E0F2F1",
+              "on-primary": "#FFFFFF",
+              "secondary": "#263238",
+              "surface": "#F5F7F7",
+              "surface-container": "#FFFFFF",
+              "outline": "#CFD8DC",
+              "outline-variant": "#ECEFF1",
+              "on-surface": "#263238",
+              "on-surface-variant": "#546E7A"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.5rem",
+              "lg": "0.75rem",
+              "xl": "1rem",
+              "2xl": "1.5rem",
+              "full": "9999px"
+            },
+            "fontFamily": {
+              "headline": ["Public Sans"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      .pharmacy-gradient {
+        background: linear-gradient(135deg, #00BFA5 0%, #009688 100%);
+      }
+      body {
+        min-height: 100dvh;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex items-center justify-center p-4 md:p-6">
+<main class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 bg-surface-container rounded-[2.5rem] overflow-hidden shadow-[0px_20px_50px_rgba(0,191,165,0.08)] border border-outline-variant">
+<!-- Left Column: Professional/Pharmacy Aesthetic -->
+<div class="lg:col-span-6 relative hidden lg:flex flex-col justify-between p-16 bg-primary-container overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+<img alt="Medical texture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDehMv_XKgwjWmQupVrlQIxTi5C9qDbMe99TuFhQobJF2d1Cwajakg5F6sxa96pgq9xbhwSyVlZoVrTnRVPKyju0IytGAbJPpSyGjlD27shd6DGMbMSamGIrRn_ybxGGLhF5dTLsMi4WSjeqsGSiFr4W1GniIvqlvQDdEehGHpVGALlB3r8o3ZChFWcLxvhkzcHoGLrdQnCz-Y1-zF4KvKaoJ6mpZqqQ-95S8UrcqcH0wUxg6Cx1lbAGp5QZI_RleMyQfPd8VtMGfIc"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-16">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="add_box">add_box</span>
+</div>
+<span class="font-headline font-extrabold text-3xl tracking-tight text-secondary">VeraDose</span>
+</div>
+<h1 class="font-headline text-5xl font-extrabold text-secondary tracking-tight leading-[1.1] mb-8">
+                    Precision care for <br/> <span class="text-primary">your well-being.</span>
+</h1>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<p class="font-bold text-secondary text-lg">Verified Prescriptions</p>
+<p class="text-on-surface-variant text-sm">Automated safety checks for every dosage.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="clinical_notes">clinical_notes</span>
+<div>
+<p class="font-bold text-secondary text-lg">Clinical Data Sync</p>
+<p class="text-on-surface-variant text-sm">Real-time updates from your healthcare provider.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 pt-12">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/40 text-on-surface-variant text-xs font-semibold uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Trusted by 200+ Pharmacies
+                </div>
+</div>
+</div>
+<!-- Right Column: Login Form -->
+<div class="lg:col-span-6 bg-white p-8 md:p-20 flex flex-col justify-center">
+<div class="max-w-md mx-auto w-full">
+<!-- Mobile Logo -->
+<div class="flex items-center gap-3 mb-10 lg:hidden justify-center">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl" data-icon="add_box">add_box</span>
+</div>
+<span class="font-headline font-extrabold text-2xl tracking-tight text-secondary">VeraDose</span>
+</div>
+<div class="mb-10 text-center lg:text-left">
+<h2 class="font-headline text-3xl font-extrabold text-secondary tracking-tight mb-3">Professional Sign In</h2>
+<p class="text-on-surface-variant">Access your patient portal and dosage schedules.</p>
+</div>
+<form class="space-y-5">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="text-sm font-bold text-secondary/70 ml-1" for="email">Work Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="mail">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface rounded-2xl border-2 border-transparent focus:border-primary focus:bg-white focus:ring-0 transition-all outline-none text-on-surface font-medium placeholder:text-on-surface-variant/40" id="email" placeholder="name@veradose.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-bold text-secondary/70" for="password">Password</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="lock">lock</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface rounded-2xl border-2 border-transparent focus:border-primary focus:bg-white focus:ring-0 transition-all outline-none text-on-surface font-medium placeholder:text-on-surface-variant/40" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center gap-2 px-1 py-2">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary/20" id="remember" type="checkbox"/>
+<label class="text-sm text-on-surface-variant font-medium" for="remember">Keep me signed in for 30 days</label>
+</div>
+<!-- Login Button -->
+<button class="w-full pharmacy-gradient text-white font-bold py-4.5 px-8 rounded-2xl shadow-xl shadow-primary/20 hover:shadow-primary/30 active:scale-[0.98] transition-all transform flex items-center justify-center gap-2 mt-4" type="submit">
+<span class="text-lg">Access Portal</span>
+<span class="material-symbols-outlined text-xl" data-icon="chevron_right">chevron_right</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-10">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-widest font-bold text-on-surface-variant/50">
+<span class="px-4 bg-white">Professional Auth</span>
+</div>
+</div>
+<!-- Social/External Logins -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 py-3.5 px-4 bg-surface rounded-2xl hover:bg-outline-variant transition-colors border border-outline-variant/30">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCEGuTLvgSOI2bqbQYVQ1NKi6JhQ7XR7sOOQBS4nneHlGoUxm1qAtSYv7Vndzw4COEj9WzeXemSRtyed-CkyQ5e_vGo_ZD-xp9s4hIdb4INiDahf_6GKBaKVf9U_PGeHQw82fPHqRulctL6nmS4fHEXmuaHVTjPmTU9svusz-zwCsqXO0A1gDSDhL3pUkTthUB7nXKIJzn5r33B_XzTBRhF3kqyyY8U6JbntXLU94ezwIpe9tfmH2oyi94eFF9_hXV0RG9PU2KRkRD"/>
+<span class="font-bold text-secondary text-sm">SSO Login</span>
+</button>
+<button class="flex items-center justify-center gap-3 py-3.5 px-4 bg-surface rounded-2xl hover:bg-outline-variant transition-colors border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="badge">badge</span>
+<span class="font-bold text-secondary text-sm">Staff Key</span>
+</button>
+</div>
+<!-- Footer Link -->
+<p class="mt-12 text-center text-on-surface-variant text-sm font-medium">
+                    New to VeraDose? 
+                    <a class="text-primary font-extrabold hover:underline underline-offset-4 ml-1" href="#">Register Clinic</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Verified Badge -->
+<div class="fixed bottom-6 right-6 hidden sm:flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="verified">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">HIPAA Compliant Infrastructure</span>
+</div>
+</body></html>

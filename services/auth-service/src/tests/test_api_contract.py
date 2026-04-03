@@ -11,7 +11,6 @@ def test_register_user():
     payload = {
         "email": "testuser@example.com",
         "password": "SecurePassword123",
-        "username": "testuser"
     }
     
     response = requests.post(url, json=payload)
@@ -21,8 +20,57 @@ def test_register_user():
     
     # Check expected JSON contract
     data = response.json()
-    assert "email" in data
-    assert data["email"] == payload["email"]
+    assert "userId" in data
+    assert data["message"] == "User created"
+
+def test_register_user_no_email():
+    url = f"{BASE_URL}/api/v1/auth/register"
+    payload = {
+        "email": "",
+        "password": "SecurePassword123",
+    }
+    
+    response = requests.post(url, json=payload)
+    
+    # Check standard HTTP status codes for creation
+    assert response.status_code in [400]
+    
+    # Check expected JSON contract
+    data = response.json()
+    assert data["error"] == "Email and password are required"
+
+def test_register_user_no_password():
+    url = f"{BASE_URL}/api/v1/auth/register"
+    payload = {
+        "email": "testuser@example.com",
+        "password": "",
+    }
+    
+    response = requests.post(url, json=payload)
+    
+    # Check standard HTTP status codes for creation
+    assert response.status_code in [400]
+    
+    # Check expected JSON contract
+    data = response.json()
+    assert data["error"] == "Email and password are required"
+
+def test_register_weak_password():
+    url = f"{BASE_URL}/api/v1/auth/register"
+    payload = {
+        "email": "testuser@example.com",
+        "password": "1234",
+    }
+    
+    response = requests.post(url, json=payload)
+    
+    # Check standard HTTP status codes for creation
+    assert response.status_code in [400]
+    
+    # Check expected JSON contract
+    data = response.json()
+    assert data["error"] in ['Very Weak', 'Weak', 'Fair']
+
 
 # ==========================================
 # 2. POST /api/v1/auth/login

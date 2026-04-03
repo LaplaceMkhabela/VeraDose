@@ -37,3 +37,5 @@ coverage/
 
 # Optional: TypeScript cache
 *.tsbuildinfo
+
+__pycache__

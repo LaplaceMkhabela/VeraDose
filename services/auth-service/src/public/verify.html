@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify Your Email | VeraDose</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pharmacy-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#00BFA5",
+                        "primary-dark": "#00a690",
+                        "surface": "#f9fafb",
+                        "on-surface": "#111827",
+                        "on-surface-variant": "#4b5563",
+                        "outline": "#d1d5db"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex flex-col items-center justify-center p-6 relative">
+<!-- Header / Brand Logo -->
+<header class="fixed top-12 left-0 w-full flex justify-center px-6">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1, 'wght' 600;">add_box</span>
+</div>
+<span class="font-headline font-bold text-2xl tracking-tight text-on-surface">VeraDose</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full max-w-md z-10">
+<div class="pharmacy-card p-8 md:p-12 rounded-2xl shadow-sm flex flex-col items-center text-center">
+<!-- Icon Area -->
+<div class="mb-8">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 300;">verified_user</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="space-y-3 mb-10">
+<h1 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Verify your account</h1>
+<p class="text-on-surface-variant text-sm leading-relaxed px-4">
+                    We've sent a 6-digit verification code to <span class="text-on-surface font-semibold">health.sync@example.com</span> to ensure your prescription data remains secure.
+                </p>
+</div>
+<!-- OTP Input Form -->
+<form class="w-full space-y-8">
+<div class="flex justify-between gap-2">
+<input class="w-11 h-14 md:w-12 md:h-16 text-center text-xl font-bold bg-white border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all rounded-xl" maxlength="1" placeholder="-" type="number"/>
+<input class="w-11 h-14 md:w-12 md:h-16 text-center text-xl font-bold bg-white border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all rounded-xl" maxlength="1" placeholder="-" type="number"/>
+<input class="w-11 h-14 md:w-12 md:h-16 text-center text-xl font-bold bg-white border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all rounded-xl" maxlength="1" placeholder="-" type="number"/>
+<input class="w-11 h-14 md:w-12 md:h-16 text-center text-xl font-bold bg-white border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all rounded-xl" maxlength="1" placeholder="-" type="number"/>
+<input class="w-11 h-14 md:w-12 md:h-16 text-center text-xl font-bold bg-white border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all rounded-xl" maxlength="1" placeholder="-" type="number"/>
+<input class="w-11 h-14 md:w-12 md:h-16 text-center text-xl font-bold bg-white border border-outline focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all rounded-xl" maxlength="1" placeholder="-" type="number"/>
+</div>
+<div class="space-y-6">
+<button class="w-full py-3.5 bg-primary hover:bg-primary-dark text-white font-semibold text-base rounded-lg shadow-sm transition-colors" type="submit">
+                        Confirm Identity
+                    </button>
+<div class="flex flex-col gap-3">
+<button class="text-primary font-medium text-sm hover:text-primary-dark transition-colors" type="button">
+                            Resend verification code
+                        </button>
+<div class="h-px w-12 bg-gray-200 mx-auto"></div>
+<p class="text-on-surface-variant text-xs font-medium">
+                            Need help? Contact our <a class="underline" href="#">pharmacist support</a>
+</p>
+</div>
+</div>
+</form>
+</div>
+<!-- Trust Badges -->
+<div class="mt-8 flex justify-center items-center gap-8 text-on-surface-variant opacity-70">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">HIPAA Compliant</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">lock_outline</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Secure Access</span>
+</div>
+</div>
+</main>
+<!-- Footer Decoration -->
+<footer class="fixed bottom-0 left-0 w-full p-8 flex justify-center pointer-events-none">
+<div class="text-[10px] text-gray-400 font-medium tracking-widest uppercase">
+            © 2024 VeraDose Pharmaceutical Systems
+        </div>
+</footer>
+</body></html>
